@@ -1,0 +1,60 @@
+<form method="post" action="/favnums">
+
+	<input type="text" name="first_name"> First Name
+	<br>
+	<input type="text" name="last_name"> Last Name
+	<br>
+	<input type="text" name="age"> Age
+	<br>
+	<input type="text" name="favorite_numbers"> Favorite Numbers
+	<br>
+	<input type="text" name="favorite_food"> Favorite Food
+	<br>
+	<input type="text" name="favorite_phrase"> Favorite Phrase
+
+</form>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Age</th>
+				<th>Favorite Numbers</th>
+				<th>Favorite Food</th>
+				<th>Favorite Phrase</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%favnums.each do |_____|%>
+				<tr>
+
+				<td><%=contacts["first_name"] %></td>
+				<td><%=contacts["last_name"] %></td>
+				<td><%=contacts["age"] %></td>
+				<td><%=contacts["favorite_numbers"] %></td>       
+				<td><%=contacts["favorite_food"] %></td>       
+				<td><%=contacts["favorite_phrase"] %></td>               
+				</tr>            
+			<%end%>        
+		</tbody>
+	</table>
+
+	<br>
+
+		<form action='/update_column' method='post'>
+
+   		<select name='table_column'>
+			<option value='col_first_name'>First Name</option>
+			<option value='col_last_name'>Last Name</option>
+			<option value='col_age'>Age</option>
+			<option value='col_favorite_numbers'>Favorite Numbers</option>
+			<option value='col_favorite_food'>Favorite Food</option>
+			<option value='col_favorite_phrase'>Favorite Phrase</option>
+		</select>
+		<br>
+
+	   	<input type="text" name="new_data"><br>
+	   	<input type="text" name="old_data"><br>
+	   	<input type="submit" value="Update">
+   </form>
