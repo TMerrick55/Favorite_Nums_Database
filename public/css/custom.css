@@ -1,0 +1,15 @@
+table{
+	border-style:solid;
+	border-color:red;
+	border-width:2px;
+}
+
+td{
+	text-align: center;
+	border: 1px solid black;
+	background-color: white;
+}
+
+tr{
+	background-color: gray;
+}
