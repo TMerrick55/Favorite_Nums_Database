@@ -11,7 +11,7 @@ db_params = {
 	db = PG::Connection.new(db_params)
 
 	get '/' do
-		favnums=db.exec("SELECT first_name, last_name, age, favorite_numbers, favorite_food, favorite_phrase FROM favnums");
+		favnums=db.exec("SELECT first_name, last_name, age, favorite_numbers, favorite_food, favorite_phrase FROM favorite_details_database");
 		erb :index, locals: {favnums: favnums}
 	end
 
@@ -23,7 +23,7 @@ db_params = {
 		favorite_food = params[:favorite_food]
 		favorite_phrase = params[:favorite_phrase]
 
-		db.exec("INSERT INTO favnums (first_name, last_name, age, favorite_numbers, favorite_food, favorite_phrase) VALUES('#{first_name}', '#{last_name}', '#{age}', '#{favorite_numbers}', '#{favorite_food}', '#{favorite_phrase}')");
+		db.exec("INSERT INTO favorite_details_database (first_name, last_name, age, favorite_numbers, favorite_food, favorite_phrase) VALUES('#{first_name}', '#{last_name}', '#{age}', '#{favorite_numbers}', '#{favorite_food}', '#{favorite_phrase}')");
 		redirect '/'
 	end
 

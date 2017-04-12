@@ -11,6 +11,8 @@
 	<input type="text" name="favorite_food"> Favorite Food
 	<br>
 	<input type="text" name="favorite_phrase"> Favorite Phrase
+	<br>
+	<input type="submit" name= 'Upload Now'>
 
 </form>
 
@@ -26,15 +28,15 @@
 			</tr>
 		</thead>
 		<tbody>
-			<%favnums.each do |_____|%>
+			<%favnums.each do |favorites|%>
 				<tr>
 
-				<td><%=contacts["first_name"] %></td>
-				<td><%=contacts["last_name"] %></td>
-				<td><%=contacts["age"] %></td>
-				<td><%=contacts["favorite_numbers"] %></td>       
-				<td><%=contacts["favorite_food"] %></td>       
-				<td><%=contacts["favorite_phrase"] %></td>               
+				<td><%=favorites["first_name"] %></td>
+				<td><%=favorites["last_name"] %></td>
+				<td><%=favorites["age"] %></td>
+				<td><%=favorites["favorite_numbers"] %></td>       
+				<td><%=favorites["favorite_food"] %></td>       
+				<td><%=favorites["favorite_phrase"] %></td>               
 				</tr>            
 			<%end%>        
 		</tbody>
