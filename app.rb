@@ -36,17 +36,22 @@ db_params = {
    case column
 
    when 'col_first_name'
-   	db.exec("UPDATE favnums SET first_name = '#{new_data}' WHERE first_name = '#{old_data}' ");
+   	db.exec("UPDATE favorite_details_database SET first_name = '#{new_data}' WHERE first_name = '#{old_data}' ");
    when 'col_last_name'
-   	db.exec("UPDATE favnums SET last_name = '#{new_data}' WHERE last_name = '#{old_data}' ");
+   	db.exec("UPDATE favorite_details_database SET last_name = '#{new_data}' WHERE last_name = '#{old_data}' ");
    when 'col_age'
-   	db.exec("UPDATE favnums SET age = '#{new_data}' WHERE age = '#{old_data}' ");
+   	db.exec("UPDATE favorite_details_database SET age = '#{new_data}' WHERE age = '#{old_data}' ");
    when 'col_favorite_numbers'
-   	db.exec("UPDATE favnums SET favorite_numbers = '#{new_data}' WHERE favorite_numbers = '#{old_data}' ");
+   	db.exec("UPDATE favorite_details_database SET favorite_numbers = '#{new_data}' WHERE favorite_numbers = '#{old_data}' ");
    when 'col_favorite_food'
-   	db.exec("UPDATE favnums SET favorite_food = '#{new_data}' WHERE favorite_food = '#{old_data}' ");
+   	db.exec("UPDATE favorite_details_database SET favorite_food = '#{new_data}' WHERE favorite_food = '#{old_data}' ");
    when 'col_favorite_phrase'
-   	db.exec("UPDATE favnums SET favorite_phrase = '#{new_data}' WHERE favorite_phrase = '#{old_data}' ");
+   	db.exec("UPDATE favorite_details_database SET favorite_phrase = '#{new_data}' WHERE favorite_phrase = '#{old_data}' ");
 	end
    redirect '/'
+end
+
+post '/delete_all' do
+	db.exec("TRUNCATE favorite_details_database");
+	redirect '/'
 end
