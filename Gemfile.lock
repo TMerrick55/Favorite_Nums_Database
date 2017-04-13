@@ -16,7 +16,8 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  sinatra
+  pg (~> 0.18.4)
+  sinatra (~> 1.4.0)
 
 BUNDLED WITH
    1.13.7
