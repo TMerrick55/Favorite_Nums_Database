@@ -13,7 +13,7 @@ GEM
     tilt (2.0.7)
 
 PLATFORMS
-  x86-mingw32by
+  x86-mingw32
 
 DEPENDENCIES
   sinatra
