@@ -16,14 +16,17 @@ tr{
 	background-color: grey;
 }
 
-.submit{
+/*.button{
 	background-color: purple;
 	border-color: black;
 	color: white;
+
 }
 
-/*.layout{
-	background-color: darkseagreen;
+.layout{
+	background-color: gold;
 	border: 5px solid white;
 	padding:10px;
 }*/
+
+/*ALL ATTEMPTS TO ADD FURTHER CSS IS NOT WORKING, UNSURE WHY*/
