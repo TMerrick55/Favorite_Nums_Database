@@ -1,15 +1,21 @@
+.layout{
+	background-color: darkseagreen;
+	font-family: sans-serif;
+	border: 5px solid darkred;
+	padding: 10px;
+}
+
 table{
-	border-style:solid;
-	border-color:red;
-	border-width:2px
+	background-color: darksalmon;
+	border-collapse: collapse;
+	border-style: double;
+	border-width: 6px;
+	border-color: black;
+	font-family: sans-serif;
 }
 
-td{
-	text-align: center;
-	border: 1px solid red;
-	background-color: silver;
-}
-
-tr{
-	background-color: grey;
+.submit{
+	background-color: darkred;
+	border-color: black;
+	color: white;
 }
